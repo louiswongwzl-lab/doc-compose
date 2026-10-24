@@ -22,8 +22,8 @@ description: 按模板文档的结构，梳理另一份文档的内容并填入�
 | --- | --- | --- |
 | 入站转换（docx/xlsx/pdf/pptx → md） | Python ≥ 3.9 + `markitdown` | `pip install 'markitdown[all]'` |
 | Excel 兜底读取 | `openpyxl` | `pip install openpyxl`（markitdown 一般已带） |
-| 出站 docx/pdf（推荐） | `pandoc` | Windows：`winget install JohnPaddock.pandoc` 或 `scoop install pandoc`；macOS：`brew install pandoc`；Linux：系统包管理器 |
-| PDF 兜底（无 pandoc 时） | 浏览器无头打印 | Windows 11 自带 Edge；macOS 用 `cupsfilter` 或提示用户装 pandoc |
+| 出站 docx/pdf（推荐） | `pandoc` | Windows：`winget install --id JohnMacFarlane.Pandoc -e` 或 `scoop install pandoc`；macOS：`brew install pandoc`；Linux：系统包管理器 |
+| PDF 兜底（无 LaTeX 时） | ① Chromium 系浏览器无头打印；② `pip install reportlab` 纯 Python 渲染（内置中文字体，无系统依赖） | 保留一个 Edge/Chrome；两者都不可用时 reportlab 可独立走通 |
 
 自检命令（按操作系统选 `where`/`which`）：`where pandoc`、`python -m markitdown --help`、`python -c "import openpyxl"`。
 **任一关键工具缺失：先把安装命令告诉用户，等工具就位再进入转换流程；不要假装能转。**

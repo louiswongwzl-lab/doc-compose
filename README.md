@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | Word/Excel/PDF/PPT → Markdown（必需） | Python ≥ 3.9 + markitdown | `pip install 'markitdown[all]'` |
 | Excel 兜底读取 | openpyxl | `pip install openpyxl` |
-| 输出 Word/PDF（推荐） | pandoc | Windows：`winget install JohnPaddock.pandoc`；macOS：`brew install pandoc`；Linux：包管理器安装 |
+| 输出 Word/PDF（推荐） | pandoc | Windows：`winget install --id JohnMacFarlane.Pandoc -e`；macOS：`brew install pandoc`；Linux：包管理器安装 |
 
 Agent 开跑前会自检这些工具，缺失时会给出对应安装命令，不会瞎转。
 
